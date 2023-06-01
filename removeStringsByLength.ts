@@ -1,10 +1,11 @@
 export const removeStringsByLength = (list: string[], length: number) => {
+  const newList: string[] = [];
+
   for (let i = 0; i < list.length; i++) {
-    if (list[i].length >= length) {
-      const index = list.indexOf(list[i]);
-      list.splice(index, 1);
+    if (list[i].length <= length) {
+      newList.push(list[i]);
     }
   }
 
-  return list;
+  return newList;
 };
